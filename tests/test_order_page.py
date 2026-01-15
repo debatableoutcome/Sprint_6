@@ -97,4 +97,5 @@ class TestOrderPage:
             order_page.switch_to_dzen_tab()
 
         with allure.step('Проверить, что открыт сайт dzen.ru'):
-            assert 'dzen.ru' in driver.current_url
+            assert 'dzen.ru' in order_page.get_current_url()
+
