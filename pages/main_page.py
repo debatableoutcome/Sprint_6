@@ -1,6 +1,5 @@
-from selenium.webdriver.support.ui import WebDriverWait
+from pages.base_page import BasePage
 from selenium.webdriver.support import expected_conditions as EC
-
 from locators.main_page_locators import (
     FAQ_BLOCK,
     FAQ_QUESTIONS,
@@ -11,38 +10,31 @@ from locators.main_page_locators import (
 from config.urls import BASE_URL
 
 
-class MainPage:
+class MainPage(BasePage):
     url = BASE_URL
 
-    def __init__(self, driver):
-        self.driver = driver
-        self.wait = WebDriverWait(driver, 10)
-
     def open(self):
-        self.driver.get(self.url)
+        super().open(self.url)
 
     def scroll_to_faq(self):
-        faq_block = self.wait.until(EC.presence_of_element_located(FAQ_BLOCK))
-        self.driver.execute_script('arguments[0].scrollIntoView(true);', faq_block)
+        self.scroll_into_view(FAQ_BLOCK)
 
     def click_faq_question(self, index):
-        questions = self.wait.until(EC.presence_of_all_elements_located(FAQ_QUESTIONS))
-        self.wait.until(EC.element_to_be_clickable(questions[index])).click()
+        questions = self.wait_presence_all(FAQ_QUESTIONS)
+        self.click(questions[index])
 
     def get_faq_answer_text(self, index):
-        answers = self.wait.until(EC.presence_of_all_elements_located(FAQ_ANSWERS))
+        answers = self.wait_presence_all(FAQ_ANSWERS)
         answer = answers[index]
         self.wait.until(EC.visibility_of(answer))
         return answer.text
 
     def click_order_top(self):
-        self.wait.until(EC.element_to_be_clickable(ORDER_BUTTON_TOP)).click()
+        self.click(ORDER_BUTTON_TOP)
 
     def click_order_bottom(self):
-        btn = self.wait.until(EC.presence_of_element_located(ORDER_BUTTON_BOTTOM))
-        self.driver.execute_script('arguments[0].scrollIntoView(true);', btn)
-        self.wait.until(EC.element_to_be_clickable(ORDER_BUTTON_BOTTOM)).click()
+        self.scroll_into_view(ORDER_BUTTON_BOTTOM)
+        self.click(ORDER_BUTTON_BOTTOM)
 
     def is_main_page_opened(self):
-        return self.wait.until(EC.url_to_be(self.url))
-
+        return self.wait_url_to_be(self.url)
