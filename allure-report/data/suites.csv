@@ -1,0 +1,39 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"
+Проверяет, что при клике на вопрос открывается соответствующий ответ
+","2857","test_faq_answer_opens[faq_0]","tests","2026-01-14","passed","2026-01-14","TestFaq","test_main_page","",""
+"
+Проверяет, что при клике на вопрос открывается соответствующий ответ
+","3264","test_faq_answer_opens[faq_2]","tests","2026-01-14","passed","2026-01-14","TestFaq","test_main_page","",""
+"
+Проверяет, что кнопка с лого ведет на главную, находясь на странице заказа
+","2449","test_scooter_logo_redirects_to_main_page","tests","2026-01-14","passed","2026-01-14","TestOrderPage","test_order_page","",""
+"
+Проверяет, что при клике на вопрос открывается соответствующий ответ
+","3195","test_faq_answer_opens[faq_4]","tests","2026-01-14","passed","2026-01-14","TestFaq","test_main_page","",""
+"
+Проверяет, что при клике на вопрос открывается соответствующий ответ
+","3438","test_faq_answer_opens[faq_1]","tests","2026-01-14","passed","2026-01-14","TestFaq","test_main_page","",""
+"
+Проверяет, что при клике на вопрос открывается соответствующий ответ
+","2896","test_faq_answer_opens[faq_5]","tests","2026-01-14","passed","2026-01-14","TestFaq","test_main_page","",""
+"
+Проверяет позитивный сценарий заказа с набором данных 1, 
+вход в заказ - кнопка «Заказать» вверху страницы
+","4494","test_order_from_top_button_shows_success_modal","tests","2026-01-14","passed","2026-01-14","TestOrderPage","test_order_page","",""
+"
+Проверяет позитивный сценарий заказа с набором данных 2, 
+вход в заказ - кнопка «Заказать» внизу страницы
+","4387","test_order_from_bottom_button_shows_success_modal","tests","2026-01-14","passed","2026-01-14","TestOrderPage","test_order_page","",""
+"
+Проверяет, что при клике на вопрос открывается соответствующий ответ
+","3650","test_faq_answer_opens[faq_6]","tests","2026-01-14","passed","2026-01-14","TestFaq","test_main_page","",""
+"
+Проверяет, что кнопка с лого Яндекса открывает новую вкладку браузера с открытой страницей dzen.ru
+","2765","test_yandex_logo_opens_dzen_in_new_tab","tests","2026-01-14","passed","2026-01-14","TestOrderPage","test_order_page","",""
+"
+Проверяет, что при клике на вопрос открывается соответствующий ответ
+","3116","test_faq_answer_opens[faq_3]","tests","2026-01-14","passed","2026-01-14","TestFaq","test_main_page","",""
+"
+Проверяет, что при клике на вопрос открывается соответствующий ответ
+","3076","test_faq_answer_opens[faq_7]","tests","2026-01-14","passed","2026-01-14","TestFaq","test_main_page","",""
